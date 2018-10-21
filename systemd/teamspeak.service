@@ -1,0 +1,13 @@
+[Unit]
+Description=Teamspeak service
+BindsTo=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+RestartSec=5
+ExecStart=/usr/bin/env docker-compose -p root -f /opt/teamspeak3-server/teamspeak.yml up
+ExecStop=/usr/bin/env docker-compose -p root -f /opt/teamspeak3-server/teamspeak.yml down
+
+[Install]
+WantedBy=multi-user.target

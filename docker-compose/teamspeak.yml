@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  teamspeak:
+    image: 'teamspeak:3.4'
+    restart: always
+    volumes:
+      - type: bind
+        source: /var/local/ts3server
+        target: /var/ts3server
+    ports:
+      - 9987:9987/udp
+      - 10011:10011
+      - 30033:30033
+    environment:
+      TS3SERVER_LICENSE: accept
