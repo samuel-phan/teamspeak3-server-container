@@ -63,7 +63,7 @@ def build_rpm(ctx):
             .format(local_user_id=os.getuid(),
                     local=rpmbuild_dir,
                     cont='/rpmbuild',
-                    img=RPMBUILD_IMG_DIR.name))
+                    img=RPMBUILD_IMG_NAME))
 
     ctx.run('mv -f {} {}'.format(rpmbuild_dir / 'RPMS/x86_64/teamspeak3-server-container-{}-*.rpm'.format(VERSION),
                                  DIST_DIR))
