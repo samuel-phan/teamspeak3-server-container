@@ -1,7 +1,7 @@
 version: '3.2'
 services:
   teamspeak:
-    image: 'teamspeak:3.4'
+    image: 'teamspeak'
     restart: always
     volumes:
       - type: bind

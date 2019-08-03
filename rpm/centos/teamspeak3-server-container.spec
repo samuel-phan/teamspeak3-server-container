@@ -51,5 +51,8 @@ mkdir -p %{buildroot}/var/local/ts3server
 /var/local/ts3server
 
 %changelog
+* Sat Aug 03 2019 Samuel Phan <samuel@quoonel.com> 0.0.2
+- Always use latest teamspeak Docker image
+
 * Sun Oct 21 2018 Samuel Phan <samuel@quoonel.com> 0.0.1
 - Initial package
